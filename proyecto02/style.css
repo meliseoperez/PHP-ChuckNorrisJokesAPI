@@ -1,55 +1,115 @@
 /* Personalizar el hero section */
 .hero-section {
-    border-radius: 50% / 30%; ;
-    background-image: url('/proyecto02/chuck1.png'); 
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    color: white;
-    text-align: center;
-    padding: 100px 0;
-  }
-  
-  /* Personalizar los botones para que coincidan con el estilo del ejemplo */
-  .btn-primary {
-    border-radius: 5rem;
-    background-color: #e6b000; /* Oscurecer al pasar el ratón por encima */
-    border: 150x;
-    transition: background-color 0.3s ease; /* Añadir transición suave */
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: rgb(34, 31, 31);
+  padding: 50px 0;
 }
-  
-.btn-primary:hover {
-    border-radius: 5rem;
-    background-color: rgb(0, 255, 64); /* Un color naranja, por ejemplo */
-    transition: background-color 0.3s ease;
-}
-  .btn-danger {
-    border-radius: 5rem;
-    background-color: #e6b000; /* Oscurecer al pasar el ratón por encima */
-    border: 150x;
-    transition: background-color 0.3s ease; /* Añadir transición suave */
-  }
-  .btn-danger:hover {
-    border-radius: 5rem;
-    background-color: rgb(255, 72, 0); /* Un color naranja, por ejemplo */
-    transition: background-color 0.3s ease;
-}
-  
-  /* Personalizar las listas */
-  .list-group-item {
-    border-radius: 5rem;
-    background-color: #4f90d1; /* Un gris claro */
-    color: #9e2d2d; /* Texto oscuro para contraste */
-  }
-  
-  /* Personalizar el body */
-  body {
-    background-color: #1c1c1d; /* Un gris claro para el fondo del body */
-    font-family: 'Arial', sans-serif; /* Fuente por defecto */
-  }
 
-  h1, h2 {
-    text-align: center;
-    color: #ebe1e4; /* Color del texto para los títulos */
-  }
-  
+.form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.form-container select {
+  border-radius: 5rem;
+  background-color: #ffffff; /* Color de fondo, blanco para el select */
+  border: 1px solid #ced4da; /* Un borde similar al del botón para mantener la coherencia */
+  padding: 15px 30px; /* Dimensiones fijas, igual que el botón */
+  font-size: 1.25em; /* Tamaño de fuente, igual que el botón */
+  height: auto; /* Altura automática para acomodar el padding y el tamaño de fuente */
+  width: 100%; /* Ancho completo para ocupar el contenedor padre */
+  box-sizing: border-box; /* Para incluir padding en el cálculo del ancho y la altura */
+  cursor: pointer; /* Cursor tipo puntero como el de los botones */
+}
+.frases-container {
+  padding: 20px;
+}
+
+.input-group {
+  text-align: left;
+}
+
+/* Personalizar los botones para que coincidan con el estilo del ejemplo */
+.btn-primary {
+  border-radius: 5rem;
+  background-color: #e6b000; /* Color de fondo */
+  transition: background-color 0.3s ease; /* Añadir transición suave */
+  padding: 15px 30px; /* Dimensiones fijas */
+  font-size: 1em; /* Tamaño de fuente */
+}
+
+.btn-primary:hover {
+  background-color: #005f73;
+}
+.form-group{
+  position: relative; /* Debe ser relative para posicionar absolutamente el botón respecto a este */
+  padding-bottom: 60px; /* Asegúrate de tener suficiente espacio en la parte inferior para el botón */
+}
+.btn-reiniciar {
+  position: fixed;
+  bottom: 10px; /* Posición desde la parte inferior del contenedor .form-group */
+  left: 10px; /* Posición desde la izquierda del contenedor .form-group */
+  border-radius: 5rem;
+  background-color: #e6b000;
+  transition: background-color 0.3s ease;
+  padding: 15px 30px;
+  font-size: 1em;
+  cursor: pointer; /* Para indicar que es clickeable */
+}
+
+.btn-reiniciar:hover {
+  background-color: #005f73;
+}
+
+.scrollable-container {
+  border-radius: 15px;
+  max-height: 100px;
+  overflow-y: auto;
+  margin: 0;
+  padding: 15px;
+  border: 5px;
+  background-color: #ffffff;
+  color: #333333;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Personalizar el body */
+body {
+  background-color: #f5f5f5;
+  color: #333;
+  font-family: 'Open Sans', sans-serif;
+}
+
+/* Estilizando el contenedor para frases */
+#frases {
+  max-height: 300px;
+  overflow-y: auto;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  margin-top: 20px;
+  font-family: 'Arial', sans-serif;
+  color: #333;
+}
+
+/* Personalizar las listas */
+.list-group-item {
+  background-color: transparent;
+  border: none;
+  padding: 10px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.list-group {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+h1, h2 {
+  text-align: center;
+  color: #1a1919; /* Color del texto para los títulos */
+}

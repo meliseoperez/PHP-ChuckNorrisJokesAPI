@@ -39,26 +39,17 @@ if (isset($_GET['category'])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chuck Norris Frases</title>
+    <title>Chistes Chuck Norris</title>
     <!-- Incluir Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/css/bootstrap.min.css">
     <!-- Incluir tu hoja de estilos personalizados -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body class="bg-light">
-<h1 class="mb-4">Seleccione una categoría de chistes</h1>
     <div class="hero-section">
-    </div>
-    <div id="frases">
-            <h2 class="mb-3">Frases seleccionadas:</h2>
-            <ul class="list-group">
-                <?php foreach ($_SESSION['frases'] as $frase) : ?>
-                    <li class="list-group-item"><?php echo $frase; ?></li>
-                <?php endforeach; ?>
-            </ul>
-        </div>
-    <div>
-        <form action="index.php" method="get" class="mb-3">
+    <h1 class="mb-4">Seleccione una categoría de chistes</h1>
+    <div class="form-container">
+         <form action="index.php" method="get" class="mb-3">
             <div class="input-group">
                 <select name="category" class="form-control">
                     <?php foreach ($categorias as $categoria) : ?>
@@ -70,9 +61,24 @@ if (isset($_GET['category'])) {
                 <button type="submit" class="btn btn-primary">Obtener Frase</button>
             </div>
         </form>
+    </div> 
+    <div id="frases" class="frases-container">
+            <h2 class="mb-3">Frases seleccionadas:</h2>
+            <div class="scrollable-container">
+            <ul class="list-group">
+                <?php foreach ($_SESSION['frases'] as $frase) : ?>
+                    <li class="list-group-item"><?php echo $frase; ?></li>
+                <?php endforeach; ?>
+            </ul>
+            </div>
+        </div>   
+    </div>
+    
+    <div>
+       
         <form action="index.php" method="post">
             <div class="form-group">
-                <input type="submit" class="btn btn-danger" value="Reiniciar" name="reset">
+                <input type="submit" class="btn-reiniciar" value="Reiniciar" name="reset">
             </div>
         </form>
     </div>
