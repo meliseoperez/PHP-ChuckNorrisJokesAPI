@@ -1,0 +1,55 @@
+/* Personalizar el hero section */
+.hero-section {
+    border-radius: 50% / 30%; ;
+    background-image: url('/proyecto02/chuck1.png'); 
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 100px 0;
+  }
+  
+  /* Personalizar los botones para que coincidan con el estilo del ejemplo */
+  .btn-primary {
+    border-radius: 5rem;
+    background-color: #e6b000; /* Oscurecer al pasar el ratón por encima */
+    border: 150x;
+    transition: background-color 0.3s ease; /* Añadir transición suave */
+}
+  
+.btn-primary:hover {
+    border-radius: 5rem;
+    background-color: rgb(0, 255, 64); /* Un color naranja, por ejemplo */
+    transition: background-color 0.3s ease;
+}
+  .btn-danger {
+    border-radius: 5rem;
+    background-color: #e6b000; /* Oscurecer al pasar el ratón por encima */
+    border: 150x;
+    transition: background-color 0.3s ease; /* Añadir transición suave */
+  }
+  .btn-danger:hover {
+    border-radius: 5rem;
+    background-color: rgb(255, 72, 0); /* Un color naranja, por ejemplo */
+    transition: background-color 0.3s ease;
+}
+  
+  /* Personalizar las listas */
+  .list-group-item {
+    border-radius: 5rem;
+    background-color: #4f90d1; /* Un gris claro */
+    color: #9e2d2d; /* Texto oscuro para contraste */
+  }
+  
+  /* Personalizar el body */
+  body {
+    background-color: #1c1c1d; /* Un gris claro para el fondo del body */
+    font-family: 'Arial', sans-serif; /* Fuente por defecto */
+  }
+
+  h1, h2 {
+    text-align: center;
+    color: #ebe1e4; /* Color del texto para los títulos */
+  }
+  
